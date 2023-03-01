@@ -71,16 +71,16 @@ export default  function App() {
   return (
     <>
 
-      <Header title={props.title}/>
+      <Header title={ props.title }/>
       
       <div className='cardGrid'>
         {
-          props.imgs.map(img => <Card img={img.path} title={img.title} desc={img.desc} fullWidth={img.fullWidth} key={img.title}/>)
+          props.imgs.map(img => <Card img={ img.path } title={ img.title } desc={ img.desc } fullWidth={ img.fullWidth } key={ img.title }/>)
         }
-      <Footer />
       </div>
-      
 
+      <Footer />
+      
     </>
   )
 }
