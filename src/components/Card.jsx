@@ -6,26 +6,23 @@ import "../index.css"
 
 export default function Card({img, title, desc, fullWidth}) {
 
+  let imgSizeSelector = (size) => {
+    return <div className={ size }>
+      <img src={ img } alt="imagen de chile" className={ `card-img, ${size}`}  />
+      <h2 className='title'>{ title }</h2>
+      <p className='desc'>{ desc }</p>
+      <Button className='btn btn-light btn-outline-success p-3'>Ver más</Button>
+    </div>  
+  }
 
   return (
     <>
 
       {
           (fullWidth === true)
-              ?
-              <div className='full-width'>
-                <img src={img} alt="imagen de chile" className='card-img full-width' />
-                <h2 className='title'>{title}</h2>
-                <p className='desc'>{desc}</p>
-                <Button className='btn btn-light btn-outline-success p-3'>Ver más</Button>
-              </div> 
-              : 
-              <div className='half-width'>
-                <img src={img} alt="imagen de chile" className='card-img half-width' />
-                <h2 className='title'>{title}</h2>
-                <p className='desc'>{desc}</p>
-                <Button className='btn btn-light btn-outline-success p-3'>Ver más</Button>
-              </div>
+              ? imgSizeSelector("full-width")
+
+              : imgSizeSelector("half-width")             
       }
 
     </>
