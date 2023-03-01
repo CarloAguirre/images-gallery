@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 .cardGrid{
     background-color: black;
@@ -12,11 +13,13 @@ body{
 .full-width{  
     width: 100vw;
     grid-column: 1 / 3;
-    margin: -1px;
+    margin-bottom: -7px;
+    margin-top: -7px;
 }
 .half-width{  
     width: 50vw;
-    margin: -1px;
+    margin-bottom: -7px;
+    margin-top: -7px;
 }
 .card-img:hover{
     transition: 0.7s;
@@ -45,4 +48,14 @@ body{
     position: absolute;
     margin-top: -150px;
     margin-left: 150px;
+}
+.btn{
+    margin-top: -150px;
+    margin-left: 150px;
+    position: relative;  
+}
+.footer-wrapper{
+    background-color: black;
+    text-align: center;
+    grid-column: 1 / 3;
 }

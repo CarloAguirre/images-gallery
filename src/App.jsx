@@ -2,7 +2,9 @@ import React from 'react'
 import Card from './components/Card'
 import Header from './components/Header'
 
+
 import "../src/index.css"
+import Footer from './components/Footer'
 
 export default  function App() {
 
@@ -69,19 +71,14 @@ export default  function App() {
     <>
 
       <Header title={props.title}/>
-
       
       <div className='cardGrid'>
-        <Card img={props.imgs[0].path} title={props.imgs[0].title} desc={props.imgs[0].desc} fullWidth={props.imgs[0].fullWidth}/>
-        <Card img={props.imgs[1].path} title={props.imgs[1].title} desc={props.imgs[1].desc} fullWidth={props.imgs[1].fullWidth}/>
-        <Card img={props.imgs[2].path} title={props.imgs[2].title} desc={props.imgs[2].desc} fullWidth={props.imgs[2].fullWidth} />
-        <Card img={props.imgs[3].path} title={props.imgs[3].title} desc={props.imgs[3].desc} fullWidth={props.imgs[3].fullWidth}/>
-        <Card img={props.imgs[4].path} title={props.imgs[4].title} desc={props.imgs[4].desc} fullWidth={props.imgs[4].fullWidth}/>
-        <Card img={props.imgs[5].path} title={props.imgs[5].title} desc={props.imgs[5].desc} fullWidth={props.imgs[5].fullWidth}/>
-        <Card img={props.imgs[6].path} title={props.imgs[6].title} desc={props.imgs[6].desc} fullWidth={props.imgs[6].fullWidth}/>
-        <Card img={props.imgs[7].path} title={props.imgs[7].title} desc={props.imgs[7].desc} fullWidth={props.imgs[7].fullWidth}/>
-        <Card img={props.imgs[8].path} title={props.imgs[8].title} desc={props.imgs[8].desc} fullWidth={props.imgs[8].fullWidth}/>
+        {
+          props.imgs.map(img => <Card img={img.path} title={img.title} desc={img.desc} fullWidth={img.fullWidth} key={img.title}/>)
+        }
+      <Footer />
       </div>
+      
 
     </>
   )
