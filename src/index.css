@@ -21,13 +21,18 @@ body{
     margin-bottom: -7px;
     margin-top: -7px;
 }
+.card-img{
+    background-color: rgba(0,0,0,0.8);
+    background-image:url(http://www.gelfuzion.com/img/slides/nivo/bg-1.jpg);
+    filter:brightness(0.4);  
+}
 .card-img:hover{
     transition: 0.7s;
     border-radius: 10px;
     transform: scale(1.01);
-    background-color: rgba(0,0,0,0.8);
-    background-image:url(http://www.gelfuzion.com/img/slides/nivo/bg-1.jpg);
-    filter:brightness(0.4);   
+    background-color: none;
+    background-image: none;
+    filter:none;   
 }
 
 .header{
