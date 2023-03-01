@@ -23,7 +23,6 @@ body{
 }
 .card-img{
     background-color: rgba(0,0,0,0.8);
-    background-image:url(http://www.gelfuzion.com/img/slides/nivo/bg-1.jpg);
     filter:brightness(0.4);  
 }
 .card-img:hover{
