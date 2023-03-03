@@ -22,6 +22,7 @@ body{
     margin-top: -7px;
 }
 .card-img{
+    transition: 0.3s;
     background-color: rgba(0,0,0,0.8);
     filter:brightness(0.4);  
 }
